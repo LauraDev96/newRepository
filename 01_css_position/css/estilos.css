@@ -1,0 +1,245 @@
+/* 
+-------- CSS
+
+0. Replicar lo más fiel posible la imagen mostrada en el video. No modificaar el HTML
+1. Importar los ficheros reset y fuentes.
+2. La altura de la página será la altura del viewport.
+3. La fuente de los hx será CABECERA. La fuentes de los demás elementos, CUERPO
+4. Colores: #6ecff6, #233e72 y blanco con opacidad al 30%
+5. >> con CSS
+6. Colocacion de los elementos fuera su contexto HTML: position. 
+7. @media a 960px. Realizar DOS VERSIONES: mob->dstp; dstp->mob
+8. Utilizar las mínimas reglas posibles
+
+*/
+
+@import 'reset.css';
+@import 'fuentes.css';
+
+body {
+	width: 100%;
+	font-family: 'CUERPO';
+	background-image: url("../imagenes/fondo.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+/*Versión escritorio desktop*/
+@media screen and (min-width: 960px) {
+	article {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 10px;
+		width: 90%;
+		height: 800px;
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		left: 5%;
+		padding: 18px;
+	}
+
+	article > p:nth-of-type(1), article > p:nth-of-type(2) {
+		position: relative;
+		top: 0;
+		left: 0;
+		padding-right: 400px;
+		font-size: 25px;
+		font-weight: normal;
+	}
+
+	h1, h2, h3, h4 {
+		font-family: 'CABECERA';
+	}
+
+	article h1 {
+		font-size: 50px;
+		text-transform: uppercase;
+	}
+
+	h2, h4 {
+		font-style: italic;
+		color: #233e72;
+		font-size: 40px;
+	}
+
+	article h1, article h2, article h4, article p {
+		text-align: left;
+	}
+
+	aside {
+		color: white;
+		background: #233e72;
+		border-radius: 10px;
+		box-shadow: 0.5px 0.5px 0.5px 0.5px #233e72;
+		width: 265px;
+		height: 220px;
+		position: absolute;
+		top: 40%;
+		right: 100%;
+		left: 75%;
+	}
+
+	aside img {
+		width: 220px;
+		position: absolute;
+		padding: -50px;
+		top: -5.5%;
+		right: 23%;
+	}
+
+	aside h3, p {
+		position: relative;
+		top: -10px;
+		left: 45px;
+		font-weight: bolder;
+	}
+
+	aside h3 {
+		font-size: 35px;
+	}
+
+	aside p {
+		position: absolute;
+		top: 60px;
+		left: 50px;
+		right: 20px;
+		bottom: 20px;
+
+	}
+
+	aside p strong {
+		font-size: 20px;
+	}
+
+	aside p em {
+		opacity: 30%;
+	}
+
+	aside a {
+		text-decoration: none;
+		background: #6ecff6;
+		border: 2px solid #233e72;
+		border-radius: 7px;
+		padding: 5px;
+		color: #233e72;
+		text-indent: 25px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 15px;
+		position: absolute;
+		right: 5%;
+		top: 99%;
+		left: 55%;
+		margin: -25px;
+	}
+
+	aside a::after {
+		content: ">>";
+		position: absolute;
+		left: 55%;
+	}
+}
+
+/*Versión móvil*/
+@media screen and (max-width: 960px) {
+	article {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.3);
+		height: 870px;
+		margin: 20px;
+		margin-block-end: 15px;
+		top: 5%;
+		right: 5%;
+		left: 5%;
+		padding: 18px;
+		border-radius: 10px;
+	}
+
+	h1, h2, h3, h4 {
+		font-family: 'CABECERA';
+	}
+
+	article h1 {
+		font-size: 35px;
+		text-transform: uppercase;
+	}
+
+	h2, h4 {
+		font-style: italic;
+		color: #233e72;
+		font-size: 25px;
+	}
+
+	article h1, article h2, article h4, article p {
+		text-align: left;
+	}
+
+	aside {
+		color: white;
+		background: #233e72;
+		border-radius: 10px;
+		box-shadow: 0.5px 0.5px 0.5px 0.5px #233e72;
+		width: 265px;
+		height: 240px;
+		position: absolute;
+		top: 68%;
+		right: 100%;
+		left: 25%;
+	}
+
+	aside img {
+		width: 220px;
+		position: absolute;
+		padding: -50px;
+		top: -5.5%;
+		right: 23%;
+	}
+
+	aside h3 {
+		position: relative;
+		font-size: 35px;
+		top: -10px;
+		left: 45px;
+		font-weight: bolder;
+	}
+
+	aside p {
+		position: absolute;
+		top: 60px;
+		left: 50px;
+		right: 20px;
+		bottom: 20px;
+	}
+
+	aside p strong {
+		font-size: 20px;
+	}
+
+	aside p em {
+		opacity: 30%;
+	}
+
+	aside a {
+		text-decoration: none;
+		background: #6ecff6;
+		border: 2px solid #233e72;
+		border-radius: 7px;
+		padding: 5px;
+		color: #233e72;
+		text-indent: 25px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 15px;
+		position: absolute;
+		right: 32%;
+		top: 82%;
+		left: 28%;
+		margin: -25px;
+	}
+
+	aside a::after {
+		content: ">>";
+		position: absolute;
+		left: 55%;
+	}
+}

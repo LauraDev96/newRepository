@@ -1,0 +1,18 @@
+/* 
+-------- Fuentes
+
+Por medio de @font-face, agregar Open Sans y Open Sans Condensed (esta última de peso 700)
+Lamar a la primera CUERPO y a la segunda CABECERA
+Ambas se encuentran en Google Fonts
+*/
+
+@font-face {
+	font-family: 'CUERPO';
+	src: url('OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+	font-family: 'CABECERA';
+	src: url('RobotoCondensed-VariableFont_wght.ttf');
+	font-size: 700px;
+}

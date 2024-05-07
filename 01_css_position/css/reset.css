@@ -1,0 +1,13 @@
+/* 
+-------- Reset
+
+Solo a los elementos de tipo bloque utilizados, realizar un reset que consista en que, tanto su ancho como su alto,
+sea de 0 puntos y el modelo de caja, al borde.
+
+Hacer el reset necesario a las imágenes para poder utilizarlas mejor dentro de sus contenedores
+*/
+article, aside {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
